@@ -1,0 +1,24 @@
+.timeline {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 4px;
+    background-color: #ddd;
+  }
+  
+  .timeline-marker {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 20px 0;
+    transform: translateX(-3px);
+    transition: background-color 0.3s;
+  }
+  
+  .timeline-marker.active {
+    background-color: #007BFF;
+  }
+  
