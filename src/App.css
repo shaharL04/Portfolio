@@ -2,4 +2,27 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: #212121;
+  
+}
+
+.introductionDiv{
+  font-family: 'Fira Code', monospace;
+  color: #FFFFFF;
+}
+
+.helloIAm{
+  font-size: 14px;
+}
+
+.myName{
+  font-size: 36px;
+}
+
+.mySpecialization{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.whatDoIDo{
+  font-size: 20px;
 }
