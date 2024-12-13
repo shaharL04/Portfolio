@@ -1,0 +1,17 @@
+/* ScrollIndicator.css */
+
+.indicator-container {
+  position: fixed;
+  left: 20px; /* Adjust as necessary */
+  width: 10px;
+  background-color: #f0f0f0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.indicator {
+  width: 100%;
+  background-color: #B13737;
+  transition: height 0.2s ease-out;
+  border-radius: 5px;
+}

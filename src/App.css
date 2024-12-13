@@ -5,24 +5,29 @@ body{
   
 }
 
+
 .introductionDiv{
   font-family: 'Fira Code', monospace;
   color: #FFFFFF;
 }
 
 .helloIAm{
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .myName{
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .mySpecialization{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .whatDoIDo{
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.textDiv{
+  margin-left: 50px;
 }
