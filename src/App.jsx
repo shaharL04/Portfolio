@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
   const aboutMeRef = useRef(null);
   const projectsRef = useRef(null);
+  console.log(window.devicePixelRatio);  // Should output 3 on an iPhone 12 Pro.
 
   return (
     <div className="mainDiv">
