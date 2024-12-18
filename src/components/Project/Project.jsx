@@ -1,13 +1,15 @@
 import './project.css'
+import ImageGallery from '../imageGallery/ImageGallery'
 
 
 const Project = ({header, body, visual}) =>{
-
+    console.log("visual"+visual)
+    console.log(Array.isArray(visual))
     return(
         <div className='ProjectDiv'>
             <p className='projectHeader'>{header}</p>
             <p className='projectBody'>{body}</p>
-            <p className='projectVisual'>{visual}</p>
+            <ImageGallery imagePaths={visual}/>
         </div>
     )
 }
