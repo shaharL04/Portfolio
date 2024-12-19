@@ -1,64 +1,90 @@
 import React, { useState } from "react";
 import "./imageGallery.css";
 
-const ImageGallery = ({ imagePaths }) => {
+const ImageGallery = ({ mediaPaths }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0); 
+  const [currentMedia, setCurrentMedia] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0); // Track the current media index
 
-  // Open the modal to view the clicked image
-  const openModal = (imagePath) => {
-    setCurrentImage(imagePath);
+  // Open the modal to view the clicked image or video
+  const openModal = (mediaPath) => {
+    setCurrentMedia(mediaPath);
     setModalOpen(true);
   };
 
   // Close the modal
   const closeModal = () => {
     setModalOpen(false);
-    setCurrentImage(null);
+    setCurrentMedia(null);
   };
 
-  // Go to the next image
-  const nextImage = () => {
+  // Go to the next media item (image or video)
+  const nextMedia = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === imagePaths.length - 1 ? 0 : prevIndex + 1
+      prevIndex === mediaPaths.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  // Go to the previous image
-  const prevImage = () => {
+  // Go to the previous media item (image or video)
+  const prevMedia = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? imagePaths.length - 1 : prevIndex - 1
+      prevIndex === 0 ? mediaPaths.length - 1 : prevIndex - 1
     );
+  };
+
+  // Function to render either image or video
+  const renderMedia = (path) => {
+    const extension = path.split(".").pop().toLowerCase();
+    if (extension === "mp4" || extension === "webm" || extension === "ogg") {
+      return (
+        <video
+          className="carousel-media"
+          src={path}
+          alt="Video"
+          controls
+          onClick={() => openModal(path)}
+        />
+      );
+    } else {
+      return (
+        <img
+          className="carousel-media"
+          src={path}
+          alt="Image"
+          onClick={() => openModal(path)}
+        />
+      );
+    }
   };
 
   return (
     <div>
-      {/* Image Carousel */}
+      {/* Media Carousel */}
       <div className="gallery">
         <div className="carousel-container">
-          <button className="carousel-button prev" onClick={prevImage}>
+          <button className="carousel-button prev" onClick={prevMedia}>
             &lt;
           </button>
-          <img
-            src={imagePaths[currentIndex]}
-            alt={`Image ${currentIndex + 1}`}
-            className="carousel-image"
-            onClick={() => openModal(imagePaths[currentIndex])}
-          />
-          <button className="carousel-button next" onClick={nextImage}>
+          {renderMedia(mediaPaths[currentIndex])}
+          <button className="carousel-button next" onClick={nextMedia}>
             &gt;
           </button>
         </div>
       </div>
 
-      {/* Modal for full-screen image view */}
+      {/* Modal for full-screen media view */}
       {modalOpen && (
         <div className="modal" onClick={closeModal}>
           <span className="modal-close" onClick={closeModal}>
             ×
           </span>
-          <img src={currentImage} alt="Current View" className="modal-image" />
+          {currentMedia.endsWith(".mp4") ||
+          currentMedia.endsWith(".webm") ||
+          currentMedia.endsWith(".ogg") ? (
+            <video className="modal-media" src={currentMedia} controls />
+          ) : (
+            <img src={currentMedia} alt="Current View" className="modal-media" />
+          )}
         </div>
       )}
     </div>

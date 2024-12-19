@@ -9,7 +9,7 @@ const Project = ({header, body, visual}) =>{
         <div className='ProjectDiv'>
             <p className='projectHeader'>{header}</p>
             <p className='projectBody'>{body}</p>
-            <ImageGallery imagePaths={visual}/>
+            <ImageGallery mediaPaths={visual}/>
         </div>
     )
 }
