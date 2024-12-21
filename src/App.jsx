@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
+import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Stack from "./components/Stack/Stack";
 import Projects from "./components/Projects/Projects";
@@ -18,16 +19,22 @@ function App() {
         <ScrollIndicator startRef={aboutMeRef} endRef={projectsRef} />
       </div>
       <div className="textDiv">
-        <div className="introductionDiv">
-          <p className="helloIAm">Hello I am</p>
-          <p className="myName">Shahar Liba</p>
-          <p className="mySpecialization">Full-stack web developer</p>
-          <p className="whatDoIDo">
-            I craft end-to-end web solutions. 
-            <br />
-            <br /> 
-            Transforming ideas into fully functional applications.
-          </p>
+        <div className="topDiv">
+          <div className="introductionDiv">
+            <p className="helloIAm">Hello I am</p>
+            <p className="myName">Shahar Liba</p>
+            <p className="mySpecialization">Full-stack web developer</p>
+            <p className="whatDoIDo">
+              I craft end-to-end web solutions. 
+              <br />
+              <br /> 
+              Transforming ideas into fully functional applications.
+            </p>
+          </div>
+
+          <div className="menuDiv">
+              <Menu/>
+          </div>
         </div>
 
         <div className="aboutMeDiv" ref={aboutMeRef}>
