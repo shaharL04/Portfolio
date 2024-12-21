@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IconChevronRight,IconChevronLeft  } from '@tabler/icons-react';
 import "./imageGallery.css";
 
 const ImageGallery = ({ mediaPaths }) => {
@@ -62,12 +63,12 @@ const ImageGallery = ({ mediaPaths }) => {
       {/* Media Carousel */}
       <div className="gallery">
         <div className="carousel-container">
-          <button className="carousel-button prev" onClick={prevMedia}>
-            &lt;
+          <button className="carousel-button-prev" onClick={prevMedia}>
+          <IconChevronLeft size={24} stroke={2} />
           </button>
           {renderMedia(mediaPaths[currentIndex])}
-          <button className="carousel-button next" onClick={nextMedia}>
-            &gt;
+          <button className="carousel-button-next" onClick={nextMedia}>
+          <IconChevronRight size={24} stroke={2} />
           </button>
         </div>
       </div>

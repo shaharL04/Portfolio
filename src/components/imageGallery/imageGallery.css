@@ -18,6 +18,40 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
 
+  .carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-button-prev{
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #B13737;
+    color: white;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .carousel-button-next{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none; 
+    background-color: #B13737;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    margin-left: 20px;
+  }
+
 
   
   .modal {
