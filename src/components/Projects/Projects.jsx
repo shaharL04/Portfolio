@@ -35,6 +35,7 @@ const Projects = () =>{
 
     return(
         <div className='ProjectsDiv'>
+            <p className="Projects">Projects</p>
             {projects.map((project,index) =>(
                 <Project
                 key={index}
