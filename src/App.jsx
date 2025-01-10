@@ -9,12 +9,11 @@ import "./App.css";
 
 function App() {
   const aboutMeRef = useRef(null);
+  const stackRef = useRef(null);
   const projectsRef = useRef(null);
-  console.log(window.devicePixelRatio);  // Should output 3 on an iPhone 12 Pro.
 
   return (
     <div className="mainDiv">
-
       <div className="scrollIndicatorDiv">
         <ScrollIndicator startRef={aboutMeRef} endRef={projectsRef} />
       </div>
@@ -25,15 +24,20 @@ function App() {
             <p className="myName">Shahar Liba</p>
             <p className="mySpecialization">Full-stack web developer</p>
             <p className="whatDoIDo">
-              I craft end-to-end web solutions. 
+              I craft end-to-end web solutions.
               <br />
-              <br /> 
+              <br />
               Transforming ideas into fully functional applications.
             </p>
           </div>
 
           <div className="menuDiv">
-              <Menu/>
+            {/* Pass refs to the Menu component */}
+            <Menu 
+              aboutMeRef={aboutMeRef} 
+              stackRef={stackRef} 
+              projectsRef={projectsRef} 
+            />
           </div>
         </div>
 
@@ -41,10 +45,10 @@ function App() {
           <AboutMe />
         </div>
 
-        <div className="stackDiv">
+        <div className="stackDiv" ref={stackRef}>
           <Stack />
         </div>
-        
+
         <div className="projectsDiv" ref={projectsRef}>
           <Projects />
         </div>

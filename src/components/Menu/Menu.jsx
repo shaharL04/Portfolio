@@ -1,37 +1,48 @@
-import './menu.css'
 
-const Menu = () =>{
+import './menu.css';
+
+const Menu = ({ aboutMeRef, stackRef, projectsRef }) => {
+
+    const handleScroll = (sectionRef) => {
+        if (sectionRef && sectionRef.current) {
+            window.scrollTo({
+                top: sectionRef.current.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     const properties = [
         {
             sectionName: "About Me",
-            sectionUrl: "/AboutMe"
+            sectionRef: aboutMeRef
         },
         {
             sectionName: "Stack",
-            sectionUrl: "/Stack"
+            sectionRef: stackRef
         },
         {
             sectionName: "Projects",
-            sectionUrl: "/Projects"
+            sectionRef: projectsRef
         },
-    ]
-    return(
-        <div>
+    ];
+
+    return (
+        <div className='wrapperDiv'>
             <div className='menuProp'>
-                {properties.map((property, index)=>{
+                {properties.map((property, index) => {
                     return (
-                        <div key={index} className={`property`+index}>
-                            <button onClick={property.sectionUrl}>
+                        <div key={index} className={`property${index}`}>
+                            <button onClick={() => handleScroll(property.sectionRef)}>
                                 {property.sectionName}
                             </button>
                         </div>
                     );
                 })}
             </div>
-            <img src='/menu.png'></img>
+            <img className="menuPng" src='/menu.png' alt="Menu" />
         </div>
-    )
+    );
 }
 
-export default Menu
+export default Menu;
