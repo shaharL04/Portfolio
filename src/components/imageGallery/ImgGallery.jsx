@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IconChevronRight,IconChevronLeft  } from '@tabler/icons-react';
 import "./imageGallery.css";
 
-const ImageGallery = ({ mediaPaths }) => {
+const ImgGallery = ({ mediaPaths }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentMedia, setCurrentMedia] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0); // Track the current media index
@@ -93,4 +93,4 @@ const ImageGallery = ({ mediaPaths }) => {
   );
 };
 
-export default ImageGallery;
+export default ImgGallery;
