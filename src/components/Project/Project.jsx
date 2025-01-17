@@ -1,5 +1,5 @@
 import './project.css'
-import ImageGallery from '@/components/ImageGallery/ImageGallery'
+import ImageGallery from '../ImageGallery/ImageGallery'
 
 
 const Project = ({header, body, visual}) =>{
