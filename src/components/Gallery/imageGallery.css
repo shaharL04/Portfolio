@@ -88,6 +88,14 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   }
   
+  .modal-media {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+  }
+
   .modal-close {
     position: absolute;
     top: 20px;

@@ -17,8 +17,8 @@ function App() {
       <div className="scrollIndicatorDiv">
         <ScrollIndicator startRef={aboutMeRef} endRef={projectsRef} />
       </div>
-      <div className="textDiv">
-        <div className="topDiv">
+      
+        <div className="introductionNMenuWrapper">
           <div className="introductionDiv">
             <p className="helloIAm">Hello I am</p>
             <p className="myName">Shahar Liba</p>
@@ -40,7 +40,7 @@ function App() {
             />
           </div>
         </div>
-
+      <div className="contentDiv">
         <div className="aboutMeDiv" ref={aboutMeRef}>
           <AboutMe />
         </div>
