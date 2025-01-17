@@ -40,7 +40,7 @@
     transition: width 0.3s ease;
 }
 
-/* On hover, animate the underline */
+
 [class^="property"] > button:hover::after {
-    width: 100%; /* Expand the underline fully */
+    width: 100%; 
 }

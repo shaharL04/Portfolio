@@ -2,6 +2,14 @@ body{
   background-color: #212121;
 }
 
+.menuDiv {
+  position: absolute;
+  top: 192px;
+  right: 1px;
+  z-index: 1000;
+  width: 200px;
+  height: auto;
+}
 
 .introductionDiv{
   font-family: 'Fira Code', monospace;
