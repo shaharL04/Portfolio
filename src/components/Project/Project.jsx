@@ -1,5 +1,5 @@
 import './project.css'
-import ImageGallery from '../ImageGallery/ImageGallery'
+import Gallery from '../ImageGallery/Gallery'
 
 
 const Project = ({header, body, visual}) =>{
@@ -9,7 +9,7 @@ const Project = ({header, body, visual}) =>{
         <div className='ProjectDiv'>
             <p className='projectHeader'>{header}</p>
             <p className='projectBody'>{body}</p>
-            <ImageGallery mediaPaths={visual}/>
+            <Gallery mediaPaths={visual}/>
         </div>
     )
 }
