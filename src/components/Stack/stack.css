@@ -10,38 +10,7 @@
     font-size: 20px;
 }
 
-
-
-  @media screen and (max-width: 480px) {
-    .techExmpSvg > svg{
-        width: 290px;
-    }
-  }
-  
-  /* Small Devices (Large Phones) */
-  @media screen and (max-width: 768px) {
-    .techExmpSvg > svg{
-        width: 100px;
-    }
-  }
-  
-  /* Medium Devices (Tablets) */
-  @media screen and (max-width: 1024px) {
-    .techExmpSvg > svg{
-        width: 290px;
-    }
-  }
-  
-  /* Large Devices (Laptops) */
-  @media screen and (max-width: 1280px) {
-    .techExmpSvg > svg{
-        width: 500px;
-    }
-  }
-  
-  /* Extra Large Devices (Large Screens) */
-  @media screen and (max-width: 1440px) {
-    .techExmpSvg > svg{
-        width: 700px;
-    }
-  }
+.techExmpSvg > svg{
+  display: block;
+  max-width: 100%;
+}

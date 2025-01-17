@@ -1,8 +1,5 @@
 body{
-  width: 100vw;
-  height: 100vh;
   background-color: #212121;
-  
 }
 
 
@@ -33,37 +30,3 @@ body{
 }
 
 
-/* Extra Small Devices (Mobile Phones) */
-@media screen and (max-width: 480px) {
-  .textDiv{
-    width: 70vw;
-  }
-}
-
-/* Small Devices (Large Phones) */
-@media screen and (max-width: 768px) {
-  .textDiv{
-    width: 70vw;
-  }
-}
-
-/* Medium Devices (Tablets) */
-@media screen and (max-width: 1024px) {
-  .textDiv{
-    width: 70vw;
-  }
-}
-
-/* Large Devices (Laptops) */
-@media screen and (max-width: 1280px) {
-  .textDiv{
-    width: 70vw;
-  }
-}
-
-/* Extra Large Devices (Large Screens) */
-@media screen and (max-width: 1440px) {
-  .textDiv{
-    width: 70vw;
-  }
-}
