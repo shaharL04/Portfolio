@@ -7,7 +7,7 @@ const ImageGallery = ({ mediaPaths }) => {
   const [currentMedia, setCurrentMedia] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0); // Track the current media index
 
-  //update
+  //updates
   // Open the modal to view the clicked image or video
   const openModal = (mediaPath) => {
     setCurrentMedia(mediaPath);
