@@ -1,5 +1,5 @@
 import Github from "../../assets/Github";
-import Linkedin from "../../assets/linkedin";
+import Linkedin from "../../assets/Linkedin";
 import Instagram from "../../assets/Instagram";
 import Facebook from "../../assets/facebook";
 import "./footer.css";
