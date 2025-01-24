@@ -1,61 +1,35 @@
 import React, { useRef } from "react";
-import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
-import Menu from "./components/Menu/Menu";
-import AboutMe from "./components/AboutMe/AboutMe";
-import Stack from "./components/Stack/Stack";
-import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer/Footer";
+import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel";
 import "./App.css";
 
 function App() {
-  const aboutMeRef = useRef(null);
-  const stackRef = useRef(null);
-  const projectsRef = useRef(null);
 
+  const svgPaths = [ 
+    "src/assets/microsoft.svg",
+    "src/assets/kpmg.svg",
+    "src/assets/matrix.svg",
+    "src/assets/bynet.svg",
+    "src/assets/wiz.svg",
+    "src/assets/yoman.svg",
+  ]
   return (
-    <div className="mainDiv">
-      <div className="scrollIndicatorDiv">
-        <ScrollIndicator startRef={aboutMeRef} endRef={projectsRef} />
+    <div>
+      <div className="openingDiv">
+        <div className="openingText">
+            <span className="gradientText">FullStack </span> <br />
+            <span className="normalText">Web <br /> Developer</span>
+        </div>
       </div>
-      
-        <div className="introductionNMenuWrapper">
-          <div className="introductionDiv">
-            <p className="helloIAm">Hello I am</p>
-            <p className="myName">Shahar Liba</p>
-            <p className="mySpecialization">Full-stack web developer</p>
-            <p className="whatDoIDo">
-              I craft end-to-end web solutions.
-              <br />
-              <br />
-              Transforming ideas into fully functional applications.
-            </p>
-          </div>
-
-          <div className="menuDiv">
-            {/* Pass refs to the Menu component */}
-            <Menu 
-              aboutMeRef={aboutMeRef} 
-              stackRef={stackRef} 
-              projectsRef={projectsRef} 
-            />
-          </div>
-        </div>
-      <div className="contentDiv">
-        <div className="aboutMeDiv" ref={aboutMeRef}>
-          <AboutMe />
-        </div>
-
-        <div className="stackDiv" ref={stackRef}>
-          <Stack />
-        </div>
-
-        <div className="projectsDiv" ref={projectsRef}>
-          <Projects />
-        </div>
-
-        <div className="footerDiv">
-          <Footer />
-        </div>
+      <div className="socialBtnsDiv">
+          <button className="GithubBtn socialBtns"><img className="githubImg" src="src/assets/github.svg"></img> Github</button>
+          <button className="LinkedinBtn socialBtns"><img className="linkedinImg" src="src/assets/linkedin.svg"></img>Linkedin</button>
+      </div>
+      <div className="companiesDiv">
+        <p className="companiesText">Companies I've worked with:</p>
+        <CompaniesCarousel svgPaths={svgPaths}/>
+      </div>
+      <div className="menuDiv">
+          <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
       </div>
     </div>
   );
