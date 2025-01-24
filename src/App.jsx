@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel";
+import Menu from "./components/Menu/Menu";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,21 @@ function App() {
     "src/assets/bynet.svg",
     "src/assets/wiz.svg",
     "src/assets/yoman.svg",
+  ]
+
+  const menuPropsArr = [
+    {
+      menuTitle: "About Me",
+      menuImgPath: "src/assets/person.svg"
+    },
+    {
+      menuTitle: "Stack",
+      menuImgPath: "src/assets/stack.svg"
+    },
+    {
+      menuTitle: "Projects",
+      menuImgPath: "src/assets/paper.svg"
+    }
   ]
   return (
     <div>
@@ -30,6 +46,7 @@ function App() {
       </div>
       <div className="menuDiv">
           <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
+          <Menu MenuPropsArr={menuPropsArr}/>
       </div>
     </div>
   );
