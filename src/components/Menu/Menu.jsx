@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Menu.css';
 
-const Menu = ({MenuPropsArr}) => {
+const Menu = ({MenuPropsArr,  aboutMeRef, stackRef}) => {
     const [selectedSection, setSelectedSection] = useState("");
     const redirectToSection = (section) => () => {
         setSelectedSection(section);
