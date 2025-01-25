@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Menu.css';
 
-const Menu = ({  aboutMeRef, stackRef}) => {
+const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
   
   const MenuPropsArr = [
     {
@@ -17,7 +17,7 @@ const Menu = ({  aboutMeRef, stackRef}) => {
     {
       menuTitle: "Projects",
       menuImgPath: "src/assets/paper.svg",
-      sectionRef: ""
+      sectionRef: projectsRef
     }
   ]
 

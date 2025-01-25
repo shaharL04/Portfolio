@@ -1,0 +1,27 @@
+.projects{
+    display: flex;
+    justify-content: center;
+}
+
+.projectDiv{
+    background-color: #363636;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+.projectTitle{
+    font-size: 24px;
+}
+
+.projectDescription{
+    font-size: 20px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  

@@ -3,6 +3,8 @@ import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel"
 import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Stack from "./components/Stack/Stack";
+import Projects from "./components/Projects/Projects";
+
 import "./App.css";
 
 function App() {
@@ -41,7 +43,7 @@ function App() {
 
       <div className="menuDiv">
           <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
-          <Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef}/>
+          <Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef} projectsRef={projectsRef}/>
       </div>
 
       <div className="aboutMeDiv" ref={aboutMeRef}>
@@ -51,6 +53,11 @@ function App() {
       <div className="stackDiv" ref={stackRef}>
           <Stack />
       </div>
+
+      <div className="ProjectsDiv" ref={projectsRef}>
+          <Projects />
+      </div>
+
 
     </div>
   );
