@@ -19,9 +19,17 @@ const Menu = ({  aboutMeRef, stackRef}) => {
   ]
 
     const [selectedSection, setSelectedSection] = useState("");
-    const redirectToSection = (section) => () => {
-        setSelectedSection(section);
-        window.location.href = `#${section}`;
+
+    const redirectToSection = (sectionTitle,sectionRef ) => () => {
+
+        setSelectedSection(sectionTitle);
+
+        if (sectionRef && sectionRef.current) {
+          window.scrollTo({
+              top: sectionRef.current.offsetTop,
+              behavior: 'smooth'
+          });
+      }
     }
 
     return (
