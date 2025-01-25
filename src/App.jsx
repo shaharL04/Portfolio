@@ -36,18 +36,30 @@ function App() {
             <span className="normalText">Web <br /> Developer</span>
         </div>
       </div>
+
       <div className="socialBtnsDiv">
           <button className="GithubBtn socialBtns"><img className="githubImg" src="src/assets/github.svg"></img> Github</button>
           <button className="LinkedinBtn socialBtns"><img className="linkedinImg" src="src/assets/linkedin.svg"></img>Linkedin</button>
       </div>
+
       <div className="companiesDiv">
         <p className="companiesText">Companies I've worked with:</p>
         <CompaniesCarousel svgPaths={svgPaths}/>
       </div>
+
       <div className="menuDiv">
           <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
-          <Menu MenuPropsArr={menuPropsArr}/>
+          <Menu MenuPropsArr={menuPropsArr} aboutMeRef = {aboutMeRef} stackRef = {stackRef}/>
       </div>
+
+      <div className="aboutMeDiv" ref={aboutMeRef}>
+          <AboutMe />
+      </div>
+
+      <div className="stackDiv" ref={stackRef}>
+          <Stack />
+      </div>
+
     </div>
   );
 }

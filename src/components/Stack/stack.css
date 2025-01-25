@@ -1,0 +1,17 @@
+
+.StackDiv{
+    color: #FFFFFF;
+}
+
+.stack{
+    font-size: 32px;
+}
+
+.techExmpP{
+    font-size: 20px;
+}
+
+.techExmpSvg > svg{
+  display: block;
+  max-width: 100%;
+}
