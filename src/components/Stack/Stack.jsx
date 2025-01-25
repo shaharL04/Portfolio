@@ -1,5 +1,4 @@
 import './stack.css'
-import Tech from '../../assets/Tech'
 
 const Stack = () => {
 

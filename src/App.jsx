@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel";
 import Menu from "./components/Menu/Menu";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Stack from "./components/Stack/Stack";
 import "./App.css";
 
 function App() {
