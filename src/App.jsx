@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel";
 import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
@@ -6,6 +6,9 @@ import Stack from "./components/Stack/Stack";
 import "./App.css";
 
 function App() {
+  const aboutMeRef = useRef(null);
+  const stackRef = useRef(null);
+  const projectsRef = useRef(null);
 
   const svgPaths = [ 
     "src/assets/microsoft.svg",
@@ -16,20 +19,7 @@ function App() {
     "src/assets/yoman.svg",
   ]
 
-  const menuPropsArr = [
-    {
-      menuTitle: "About Me",
-      menuImgPath: "src/assets/person.svg"
-    },
-    {
-      menuTitle: "Stack",
-      menuImgPath: "src/assets/stack.svg"
-    },
-    {
-      menuTitle: "Projects",
-      menuImgPath: "src/assets/paper.svg"
-    }
-  ]
+
   return (
     <div>
       <div className="openingDiv">
@@ -51,7 +41,7 @@ function App() {
 
       <div className="menuDiv">
           <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
-          <Menu MenuPropsArr={menuPropsArr} aboutMeRef = {aboutMeRef} stackRef = {stackRef}/>
+          <Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef}/>
       </div>
 
       <div className="aboutMeDiv" ref={aboutMeRef}>

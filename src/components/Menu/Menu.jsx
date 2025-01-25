@@ -1,7 +1,23 @@
 import { useState } from 'react';
 import './Menu.css';
 
-const Menu = ({MenuPropsArr,  aboutMeRef, stackRef}) => {
+const Menu = ({  aboutMeRef, stackRef}) => {
+  
+  const MenuPropsArr = [
+    {
+      menuTitle: "About Me",
+      menuImgPath: "src/assets/person.svg"
+    },
+    {
+      menuTitle: "Stack",
+      menuImgPath: "src/assets/stack.svg"
+    },
+    {
+      menuTitle: "Projects",
+      menuImgPath: "src/assets/paper.svg"
+    }
+  ]
+
     const [selectedSection, setSelectedSection] = useState("");
     const redirectToSection = (section) => () => {
         setSelectedSection(section);
