@@ -6,15 +6,18 @@ const Menu = ({  aboutMeRef, stackRef}) => {
   const MenuPropsArr = [
     {
       menuTitle: "About Me",
-      menuImgPath: "src/assets/person.svg"
+      menuImgPath: "src/assets/person.svg",
+      sectionRef: aboutMeRef
     },
     {
       menuTitle: "Stack",
-      menuImgPath: "src/assets/stack.svg"
+      menuImgPath: "src/assets/stack.svg",
+      sectionRef: stackRef
     },
     {
       menuTitle: "Projects",
-      menuImgPath: "src/assets/paper.svg"
+      menuImgPath: "src/assets/paper.svg",
+      sectionRef: ""
     }
   ]
 
@@ -36,7 +39,7 @@ const Menu = ({  aboutMeRef, stackRef}) => {
         <div className='menuWrapper'>
         {MenuPropsArr.map((menuObj, index) => (
           <button key={index} className={`menu-item-${index} ${selectedSection === menuObj.menuTitle ? "selected" : ""}`} 
-          onClick={redirectToSection(menuObj.menuTitle)}
+          onClick={redirectToSection(menuObj.menuTitle, menuObj.sectionRef)}
         >
             <img className= "menuImg" src={menuObj.menuImgPath} />
             <span className='menuText'>{menuObj.menuTitle}</span>
