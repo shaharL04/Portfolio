@@ -54,7 +54,7 @@ function App() {
           <Stack />
       </div>
 
-      <div className="ProjectsDiv" ref={projectsRef}>
+      <div className="ProjectsDivWrapper" ref={projectsRef}>
           <Projects />
       </div>
 
