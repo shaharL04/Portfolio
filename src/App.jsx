@@ -14,12 +14,12 @@ function App() {
   const projectsRef = useRef(null);
 
   const svgPaths = [ 
-    "src/assets/microsoft.svg",
-    "src/assets/kpmg.svg",
-    "src/assets/matrix.svg",
-    "src/assets/bynet.svg",
-    "src/assets/wiz.svg",
-    "src/assets/yoman.svg",
+    "/microsoft.svg",
+    "/kpmg.svg",
+    "/matrix.svg",
+    "/bynet.svg",
+    "/wiz.svg",
+    "/yoman.svg",
   ]
 
 
@@ -31,13 +31,13 @@ function App() {
             <span className="normalText">Web <br /> Developer</span>
         </div>
         <div className="animtedImgDiv">
-            <img className="animatedImg" src="src/assets/animatedDev.svg"></img>
+            <img className="animatedImg" src="/animatedDev.svg"></img>
         </div>
       </div>
 
       <div className="socialBtnsDiv">
-          <button className="GithubBtn socialBtns"><img className="githubImg" src="src/assets/github.svg"></img> Github</button>
-          <button className="LinkedinBtn socialBtns"><img className="linkedinImg" src="src/assets/linkedin.svg"></img>Linkedin</button>
+          <button className="GithubBtn socialBtns"><img className="githubImg" src="/github.svg"></img> Github</button>
+          <button className="LinkedinBtn socialBtns"><img className="linkedinImg" src="/linkedin.svg"></img>Linkedin</button>
       </div>
 
       <div className="companiesDiv">
