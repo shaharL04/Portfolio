@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Menu.css';
 
+//commit
 const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
   
   const MenuPropsArr = [
