@@ -7,17 +7,17 @@ const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
   const MenuPropsArr = [
     {
       menuTitle: "About Me",
-      menuImgPath: "src/assets/person.svg",
+      menuImgPath: "/person.svg",
       sectionRef: aboutMeRef
     },
     {
       menuTitle: "Stack",
-      menuImgPath: "src/assets/stack.svg",
+      menuImgPath: "/stack.svg",
       sectionRef: stackRef
     },
     {
       menuTitle: "Projects",
-      menuImgPath: "src/assets/paper.svg",
+      menuImgPath: "/paper.svg",
       sectionRef: projectsRef
     }
   ]

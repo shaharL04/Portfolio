@@ -55,7 +55,7 @@ const Projects = () => {
               <div className="projectBody">
                 <p className="projectDescription">{projectObj.projectDescription}</p>
                 <p className="projectTech"><TechInProject svgArr={projectObj.projectTech}/> </p>
-                <p className='githubProj'><img className='githubImage' src='src/assets/github.svg'></img><a href={projectObj.projectLink} className="projectGithubLink">View Code</a></p>
+                <p className='githubProj'><img className='githubImage' src='/github.svg'></img><a href={projectObj.projectLink} className="projectGithubLink">View Code</a></p>
                 </div>
             </div>
           ))}

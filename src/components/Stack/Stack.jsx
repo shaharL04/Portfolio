@@ -8,7 +8,7 @@ const Stack = () => {
             <p className='stack'>Stack</p>
             <p className='techExmpP'>SOME TECHNOLOGIES I’VE WORKED WITH:</p>
             <p className='techExmpSvg'>
-                <img src='src/assets/myStack.svg'></img>
+                <img src='/myStack.svg'></img>
             </p>
         </div>
     )

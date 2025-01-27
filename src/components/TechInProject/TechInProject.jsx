@@ -5,7 +5,7 @@ const TechInProject = ({svgArr}) => {
         <div className='techIconWrapper'>
             {svgArr.map((svgPath, index) => (
                 <div className='imgWrapper'>
-                    <img key={index} className="techIcon" src={`src/assets/${svgPath}.svg`} alt="techIcon" />
+                    <img key={index} className="techIcon" src={`/${svgPath}.svg`} alt="techIcon" />
                 </div>
             ))}
         </div>
