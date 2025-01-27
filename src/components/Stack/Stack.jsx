@@ -1,5 +1,4 @@
 import './stack.css'
-import Tech from '../../assets/Tech'
 
 const Stack = () => {
 
@@ -9,7 +8,7 @@ const Stack = () => {
             <p className='stack'>Stack</p>
             <p className='techExmpP'>SOME TECHNOLOGIES I’VE WORKED WITH:</p>
             <p className='techExmpSvg'>
-                <Tech/>
+                <img src='src/assets/myStack.svg'></img>
             </p>
         </div>
     )

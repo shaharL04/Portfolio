@@ -1,48 +1,53 @@
+import { useState } from 'react';
+import './Menu.css';
 
-import './menu.css';
+//commit
+const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
+  
+  const MenuPropsArr = [
+    {
+      menuTitle: "About Me",
+      menuImgPath: "src/assets/person.svg",
+      sectionRef: aboutMeRef
+    },
+    {
+      menuTitle: "Stack",
+      menuImgPath: "src/assets/stack.svg",
+      sectionRef: stackRef
+    },
+    {
+      menuTitle: "Projects",
+      menuImgPath: "src/assets/paper.svg",
+      sectionRef: projectsRef
+    }
+  ]
 
-const Menu = ({ aboutMeRef, stackRef, projectsRef }) => {
+    const [selectedSection, setSelectedSection] = useState("");
 
-    const handleScroll = (sectionRef) => {
+    const redirectToSection = (sectionTitle,sectionRef ) => () => {
+
+        setSelectedSection(sectionTitle);
+
         if (sectionRef && sectionRef.current) {
-            window.scrollTo({
-                top: sectionRef.current.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    };
-
-    const properties = [
-        {
-            sectionName: "About Me",
-            sectionRef: aboutMeRef
-        },
-        {
-            sectionName: "Stack",
-            sectionRef: stackRef
-        },
-        {
-            sectionName: "Projects",
-            sectionRef: projectsRef
-        },
-    ];
+          window.scrollTo({
+              top: sectionRef.current.offsetTop,
+              behavior: 'smooth'
+          });
+      }
+    }
 
     return (
-        <div className='wrapperDiv'>
-            <div className='menuProp'>
-                {properties.map((property, index) => {
-                    return (
-                        <div key={index} className={`property${index}`}>
-                            <button onClick={() => handleScroll(property.sectionRef)}>
-                                {property.sectionName}
-                            </button>
-                        </div>
-                    );
-                })}
-            </div>
-            <img className="menuPng" src='/menu.png' alt="Menu" />
+        <div className='menuWrapper'>
+        {MenuPropsArr.map((menuObj, index) => (
+          <button key={index} className={`menu-item-${index} ${selectedSection === menuObj.menuTitle ? "selected" : ""}`} 
+          onClick={redirectToSection(menuObj.menuTitle, menuObj.sectionRef)}
+        >
+            <img className= "menuImg" src={menuObj.menuImgPath} />
+            <span className='menuText'>{menuObj.menuTitle}</span>
+          </button>
+        ))}
         </div>
     );
-}
+};
 
 export default Menu;

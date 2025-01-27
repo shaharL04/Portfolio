@@ -1,0 +1,22 @@
+.companies-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .companies-carousel-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .companies-carousel-item {
+    flex-shrink: 0;
+    margin-right: 20px; /* Add spacing between logos */
+  }
+  
+  .companies-carousel-item img {
+    height: 50px; /* Adjust SVG/logo height */
+    width: auto;
+  }
+  

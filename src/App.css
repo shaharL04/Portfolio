@@ -1,40 +1,126 @@
-body{
-  background-color: #212121;
+:root {
+  font-family: 'Fira Code', monospace;
 }
 
-.menuDiv {
-  position: absolute;
-  top: 192px;
-  right: 1px;
-  z-index: 1000;
-  width: 200px;
+
+.html,body{
+  background-color: #000000;
+  font-family: inherit;
+}
+
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.openingDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.openingText {
+  font-size: 50px;
+  font-weight: bold;
+  animation: fadeInFromBottom 4s ease-out;
+}
+
+.gradientText{
+  background: linear-gradient(90deg, #4169E1, #2ECC71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-delay: 0.5s;
+}
+
+.normalText{
+  color: #FFFFFF;
+  animation-delay: 1s;
+}
+
+.animatedImg{
+  max-width: 100px;
   height: auto;
 }
 
-.introductionDiv{
-  font-family: 'Fira Code', monospace;
-  color: #FFFFFF;
+button {
+  all: unset;
+  cursor: pointer;
 }
 
-.helloIAm{
-  font-size: 10px;
-}
-
-.myName{
-  font-size: 32px;
-}
-
-.mySpecialization{
+.socialBtnsDiv{
   font-size: 20px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
 }
 
-.whatDoIDo{
-  font-size: 16px;
+.GithubBtn{
+  background-color: #343434;
+  color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.contentDiv{
-  margin-left: 50px;
+.LinkedinBtn{
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
+.socialBtns{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
+.githubImg{
+  width: 40px;
+  height: 40px;
+}
+
+.linkedinImg{
+  width: 30px;
+  height: 30px;
+}
+
+.companiesText{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.menuIntroduction{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.aboutMeDiv{
+  margin: 100px 0;
+}
+
+.stackDiv{
+  margin: 100px 0;
+}
+
+.ProjectsDivWrapper{
+  margin: 100px 0;
+}
