@@ -20,9 +20,13 @@
   }
 }
 
-
+.openingDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .openingText {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bold;
   animation: fadeInFromBottom 4s ease-out;
 }
@@ -37,6 +41,11 @@
 .normalText{
   color: #FFFFFF;
   animation-delay: 1s;
+}
+
+.animatedImg{
+  max-width: 100px;
+  height: auto;
 }
 
 button {
@@ -69,8 +78,8 @@ button {
 }
 
 .socialBtns{
-  width: 160px;
-  height: 65px;
+  width: 150px;
+  height: 50px;
   border-radius: 10px;
   text-align: center;
   display: flex;
@@ -79,13 +88,13 @@ button {
 }
 
 .githubImg{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .linkedinImg{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .companiesText{
@@ -104,7 +113,14 @@ button {
   margin-top: 50px;
 }
 
+.aboutMeDiv{
+  margin: 100px 0;
+}
+
+.stackDiv{
+  margin: 100px 0;
+}
 
 .ProjectsDivWrapper{
-  margin-top: 80px;
+  margin: 100px 0;
 }

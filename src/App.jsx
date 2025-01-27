@@ -4,6 +4,7 @@ import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Stack from "./components/Stack/Stack";
 import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -28,6 +29,9 @@ function App() {
         <div className="openingText">
             <span className="gradientText">FullStack </span> <br />
             <span className="normalText">Web <br /> Developer</span>
+        </div>
+        <div className="animtedImgDiv">
+            <img className="animatedImg" src="src/assets/animatedDev.svg"></img>
         </div>
       </div>
 
@@ -58,6 +62,9 @@ function App() {
           <Projects />
       </div>
 
+      <div className="FooterDivWrapper" >
+          <Footer />
+      </div>
 
     </div>
   );
