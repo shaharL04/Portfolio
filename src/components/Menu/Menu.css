@@ -11,7 +11,7 @@ button {
 }
 
 [class^="menu-item"]{
-    background-color: #BDBDBD;
+    background-color: #363636;
     width: 120px;
     height: 100px;
     display: flex;
