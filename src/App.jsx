@@ -35,10 +35,6 @@ function App() {
         </div>
       </div>
 
-      <div className="socialBtnsDiv">
-          <button className="GithubBtn socialBtns"><img className="githubImg" src="/github.svg"></img> Github</button>
-          <button className="LinkedinBtn socialBtns"><img className="linkedinImg" src="/linkedin.svg"></img>Linkedin</button>
-      </div>
 
       <div className="companiesDiv">
         <p className="companiesText">Companies I've worked with:</p>
