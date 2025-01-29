@@ -8,6 +8,7 @@
   .companies-carousel-content {
     display: flex;
     align-items: center;
+    gap: 25px;
   }
   
   .companies-carousel-item {
