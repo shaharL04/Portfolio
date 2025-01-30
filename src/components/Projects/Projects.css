@@ -4,22 +4,6 @@
 }
 
 
-
-.projectDiv{
-    flex-shrink: 0;
-    flex-basis: 80vw;
-    max-width: 80vw;
-    min-height: 60vh;
-    background-color: #363636;
-    text-align: center;
-    color: #FFFFFF;
-    border-radius: 20px;
-    margin: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .projectTitle{
     font-size: 24px;
 }
@@ -44,11 +28,14 @@
     flex-direction: column;
     justify-content: space-between;
     height: -webkit-fill-available;
+    width: 100%;
 }
 
 .projectTech{
     width: 60%;
     min-height: 20%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .githubImage{
@@ -70,6 +57,55 @@
     font-family: 'poppins', sans-serif;
     text-decoration: underline;
 }
+
+
+.projectCard {
+    width: 80vw;
+    height: 80vh;
+    cursor: pointer;
+    display: flex;
+    margin: 0px 15px;
+    perspective: 1000px;
+    
+}
+  
+.cardInner {
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.projectCard.flipped .cardInner {
+    transform: rotateY(180deg);
+}
+  
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    background: #363636;
+    color: white;
+    flex-direction: column;
+}
+  
+.cardBack {
+    transform: rotateY(180deg);
+    background: linear-gradient(#4169E1, #2ECC71);
+}
+
+.cardImage{
+    width: 80vw;
+}
+  
 
 
   
