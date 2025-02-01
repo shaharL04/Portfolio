@@ -99,7 +99,6 @@
   
 .cardBack {
     transform: rotateY(180deg);
-    background: linear-gradient(#4169E1, #2ECC71);
 }
 
 .cardImage{
