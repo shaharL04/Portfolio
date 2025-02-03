@@ -1,8 +1,14 @@
+@import "tailwindcss";
+
+
 :root {
   font-family: 'Open Sans' , sans-serif;
 }
 
-
+hr{
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
 .html,body{
   background-color: #000000;
   font-family: inherit;
@@ -113,12 +119,12 @@ button {
   margin-top: 50px;
 }
 
-.aboutMeDiv{
+.aboutMeDivWrapper{
   margin: 100px 0;
 }
 
 .stackDiv{
-  margin: 100px 0;
+  margin: 200px 0;
 }
 
 .ProjectsDivWrapper{

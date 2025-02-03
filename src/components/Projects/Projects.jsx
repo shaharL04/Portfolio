@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
-import TechInProject from '../TechInProject/TechInProject';
-import './Projects.css';
+import React, { useState, useRef } from "react";
+import TechInProject from "../TechInProject/TechInProject";
+import "./Projects.css";
 
 const Projects = () => {
   const [flippedStates, setFlippedStates] = useState({});
+  const sliderRef = useRef(null);
 
   const toggleFlip = (index) => {
     setFlippedStates((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
+  };
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
   };
 
   const ProjectsArr = [
@@ -65,6 +78,9 @@ const Projects = () => {
             <div key={index} className={`projectCard ${flippedStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
               <div className="cardInner">
                 <div className="cardFront" style={{background: `linear-gradient(${projectObj.imgColors[0]}, ${projectObj.imgColors[1]})` }}>
+                  <div className='flipCardDiv'>
+                    <img className='flipImage' src="/flipCard.svg" alt="flip" />
+                  </div>
                   <img className='cardImage' src={projectObj.titleImg} alt="Project logo" />
                 </div>
                 <div className="cardBack">

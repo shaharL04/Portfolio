@@ -44,17 +44,21 @@ function App() {
       <div className="menuDiv">
           <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
           <Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef} projectsRef={projectsRef}/>
+          
       </div>
 
-      <div className="aboutMeDiv" ref={aboutMeRef}>
+      <div className="aboutMeDivWrapper" ref={aboutMeRef}>
+          <hr></hr>
           <AboutMe />
       </div>
 
       <div className="stackDiv" ref={stackRef}>
+          <hr></hr>
           <Stack />
       </div>
 
       <div className="ProjectsDivWrapper" ref={projectsRef}>
+          <hr></hr>
           <Projects />
       </div>
 
