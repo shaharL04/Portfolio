@@ -65,6 +65,9 @@ const Projects = () => {
             <div key={index} className={`projectCard ${flippedStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
               <div className="cardInner">
                 <div className="cardFront" style={{background: `linear-gradient(${projectObj.imgColors[0]}, ${projectObj.imgColors[1]})` }}>
+                  <div className='flipCardDiv'>
+                    <img className='flipImage' src="/flipCard.svg" alt="flip" />
+                  </div>
                   <img className='cardImage' src={projectObj.titleImg} alt="Project logo" />
                 </div>
                 <div className="cardBack">

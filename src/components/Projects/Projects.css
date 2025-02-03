@@ -106,5 +106,10 @@
 }
   
 
-
+.flipImage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.5);
+}
   
