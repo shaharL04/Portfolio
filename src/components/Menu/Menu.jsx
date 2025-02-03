@@ -37,19 +37,21 @@ const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
     }
 
     return (
-        <div className='menuWrapper'>
-          
-        {MenuPropsArr.map((menuObj, index) => (
-          <button key={index} className={`menu-item-${index} ${selectedSection === menuObj.menuTitle ? "selected" : ""}`} 
-          onClick={redirectToSection(menuObj.menuTitle, menuObj.sectionRef)}
-        >
-            <img className= "menuImg" src={menuObj.menuImgPath} />
-            <span className='menuText'>{menuObj.menuTitle}</span>
-          </button>
+      <div className='menuWrapper'>
+          <div className='menuDynamicDiv'>
+            <ul className="menu menu-horizontal bg-base-200 rounded-box">
+          {MenuPropsArr.map((menuObj, index) => ( 
 
-            
-        ))}
-        
+            <li>
+              <img src={menuObj.menuImgPath} key={index} className={`menu-item-${index} ${selectedSection === menuObj.menuTitle ? "selected" : ""}`} 
+                onClick={redirectToSection(menuObj.menuTitle, menuObj.sectionRef)}>
+              
+              </img>
+            </li>
+
+          ))}
+          </ul>
+          </div>
         </div>
     );
 };
