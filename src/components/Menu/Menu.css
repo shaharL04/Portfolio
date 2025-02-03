@@ -1,35 +1,9 @@
-button {
-    all: unset;
-    cursor: pointer;
-}
-
-.menuText{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-[class^="menu-item"]{
-    background-color: #363636;
-    width: 120px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-[class*="selected"] {
-    background: linear-gradient( #4169E1, #2ECC71);
-    
-  }
-
-.menuImg{
-    height: 30px;
-    width: 30px;
-}
-
 .menuWrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.menuDynamicDiv{
+    position: fixed;
+    bottom: 2%;
 }
