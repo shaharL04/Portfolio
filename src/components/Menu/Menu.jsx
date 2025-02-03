@@ -38,6 +38,7 @@ const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
 
     return (
         <div className='menuWrapper'>
+          
         {MenuPropsArr.map((menuObj, index) => (
           <button key={index} className={`menu-item-${index} ${selectedSection === menuObj.menuTitle ? "selected" : ""}`} 
           onClick={redirectToSection(menuObj.menuTitle, menuObj.sectionRef)}
@@ -45,7 +46,10 @@ const Menu = ({  aboutMeRef, stackRef, projectsRef}) => {
             <img className= "menuImg" src={menuObj.menuImgPath} />
             <span className='menuText'>{menuObj.menuTitle}</span>
           </button>
+
+            
         ))}
+        
         </div>
     );
 };

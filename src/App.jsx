@@ -25,6 +25,7 @@ function App() {
 
   return (
     <div>
+      
       <div className="openingDiv">
         <div className="openingText">
             <span className="gradientText">FullStack </span> <br />
