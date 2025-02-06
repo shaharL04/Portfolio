@@ -60,8 +60,8 @@
 
 
 .projectCard {
-    width: 80vw;
-    height: 80vh;
+    width: 75vw;
+    height: 75vh;
     cursor: pointer;
     display: flex;
     margin: 0px 15px;
@@ -70,8 +70,8 @@
 }
   
 .cardInner {
-    width: 80vw;
-    height: 80vh;
+    width: 75vw;
+    height: 75vh;
     position: relative;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -102,7 +102,7 @@
 }
 
 .cardImage{
-    width: 80vw;
+    width: 75vw;
 }
   
 
@@ -112,4 +112,33 @@
     right: 0;
     transform: scale(0.5);
 }
+  
+
+.slick-dots li button:before {
+    color: #808080;
+    font-size: 7px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ffffff;
+  }
+
+
+  .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  
+
+  .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
   

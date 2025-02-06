@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import TechInProject from '../TechInProject/TechInProject';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './Projects.css';
 
 const Projects = () => {
@@ -56,36 +59,58 @@ const Projects = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '25px',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="ProjectsDiv">
       <p className="project">Projects</p>
-      <div className="itemContainer">
-        <div className="slider">
-          {ProjectsArr.map((projectObj, index) => (
-            <div key={index} className={`projectCard ${flippedStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
-              <div className="cardInner">
-                <div className="cardFront" style={{background: `linear-gradient(${projectObj.imgColors[0]}, ${projectObj.imgColors[1]})` }}>
-                  <div className='flipCardDiv'>
-                    <img className='flipImage' src="/flipCard.svg" alt="flip" />
-                  </div>
-                  <img className='cardImage' src={projectObj.titleImg} alt="Project logo" />
+      <Slider {...settings} className="project-slider">
+        {ProjectsArr.map((projectObj, index) => (
+          <div key={index} className={`projectCard ${flippedStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
+            <div className="cardInner">
+              <div className="cardFront" style={{ background: `linear-gradient(${projectObj.imgColors[0]}, ${projectObj.imgColors[1]})` }}>
+                <div className='flipCardDiv'>
+                  <img className='flipImage' src="/flipCard.svg" alt="flip" />
                 </div>
-                <div className="cardBack">
-                  <p className="projectTitle">{projectObj.projectTitle}</p>
-                  <div className='projectBody'>
-                    <p className="projectDescription">{projectObj.projectDescription}</p>
-                    <p className="projectTech"><TechInProject svgArr={projectObj.projectTech}/> </p>
-                    <p className='githubProj'>
-                      <img className='githubImage' src='/github.svg' alt="GitHub logo" />
-                      <a href={projectObj.projectLink} className="projectGithubLink">View Code</a>
-                    </p>
-                  </div>
+                <img className='cardImage' src={projectObj.titleImg} alt="Project logo" />
+              </div>
+              <div className="cardBack">
+                <p className="projectTitle">{projectObj.projectTitle}</p>
+                <div className='projectBody'>
+                  <p className="projectDescription">{projectObj.projectDescription}</p>
+                  <p className="projectTech"><TechInProject svgArr={projectObj.projectTech}/> </p>
+                  <p className='githubProj'>
+                    <img className='githubImage' src='/github.svg' alt="GitHub logo" />
+                    <a href={projectObj.projectLink} className="projectGithubLink">View Code</a>
+                  </p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
