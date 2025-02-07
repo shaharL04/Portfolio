@@ -125,10 +125,14 @@ button {
   margin: 100px 0;
 }
 
-.stackDiv{
-  margin: 200px 0;
+.stackDivWrapper{
+  margin: 150px 0;
 }
 
 .ProjectsDivWrapper{
   margin: 100px 0;
+}
+
+.FooterDivWrapper{
+  height: 10vh;
 }

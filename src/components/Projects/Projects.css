@@ -142,3 +142,9 @@
     box-sizing: border-box;
   }
   
+
+  .sliderContainer {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 30px;
+  }

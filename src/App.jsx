@@ -52,7 +52,7 @@ function App() {
           <AboutMe />
       </div>
 
-      <div className="stackDiv" ref={stackRef}>
+      <div className="stackDivWrapper" ref={stackRef}>
           <hr></hr>
           <Stack />
       </div>
