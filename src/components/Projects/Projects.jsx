@@ -67,6 +67,7 @@ const Projects = () => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '25px',
+    initialSlide: 2,
     responsive: [
       {
         breakpoint: 1024,
@@ -86,6 +87,7 @@ const Projects = () => {
   return (
     <div className="ProjectsDiv">
       <p className="project">Projects</p>
+      <div className="sliderContainer">
       <Slider {...settings} className="project-slider">
         {ProjectsArr.map((projectObj, index) => (
           <div key={index} className={`projectCard ${flippedStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
@@ -111,6 +113,7 @@ const Projects = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };
