@@ -1,10 +1,11 @@
-import  { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import CompaniesCarousel from "./components/CompaniesCarousel/CompaniesCarousel";
 import Menu from "./components/Menu/Menu";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Stack from "./components/Stack/Stack";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
+import { motion } from "framer-motion";
 
 import "./App.css";
 
@@ -22,19 +23,81 @@ function App() {
     "/yoman.svg",
   ]
 
+  const jobTitles = ["FullStack web developer", "FullStack web developer", "FullStack web developer", "FullStack web developer"];
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [cursorVisible, setCursorVisible] = useState(true);
+
+
+
+  useEffect(() => {
+    const typingSpeed = deleting ? 50 : 100;
+    const changeDelay = 2000;
+
+    if (charIndex === jobTitles[currentIndex].length && !deleting) {
+      setTimeout(() => setDeleting(true), changeDelay);
+    }
+
+    if (deleting && charIndex === 0) {
+      setDeleting(false);
+      setCurrentIndex((prev) => (prev + 1) % jobTitles.length);
+    }
+
+    const timer = setTimeout(() => {
+      setCurrentText(
+        deleting
+          ? jobTitles[currentIndex].substring(0, charIndex - 1)
+          : jobTitles[currentIndex].substring(0, charIndex + 1)
+      );
+      setCharIndex((prev) => (deleting ? prev - 1 : prev + 1));
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [charIndex, deleting, currentIndex]);
+
+  useEffect(() => {
+    const cursorTimer = setInterval(() => {
+      setCursorVisible((prev) => !prev);
+    }, 500);
+
+    return () => clearInterval(cursorTimer);
+  }, []);
 
   return (
     <div>
       
       <div className="openingDiv">
-        <div className="openingText">
-            <span className="gradientText">FullStack </span> <br />
-            <span className="normalText">Web <br /> Developer</span>
-        </div>
-        <div className="animtedImgDiv">
-            <img className="animatedImg" src="/animatedDev.svg"></img>
-        </div>
+        <motion.div
+          className="openingText"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <span className="gradientText">
+            {currentText}
+            <span className="cursorSpan"
+              style={{
+                visibility: cursorVisible ? "visible" : "hidden",
+              }}
+            >
+              <img className="cursorSvg" src="/cursor.svg"></img>
+            </span>
+          </span>
+          <br />
+        </motion.div>
+
+        <motion.div
+          className="animtedImgDiv"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+
+        </motion.div>
       </div>
+
 
 
       <div className="companiesDiv">
@@ -43,12 +106,12 @@ function App() {
       </div>
 
       <div className="menuDiv">
-          <p className="menuIntroduction">Hello! I'm Shahar Liba</p>
+         
          {/*<Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef} projectsRef={projectsRef}/> */ }
       </div>
 
       <div className="aboutMeDivWrapper" ref={aboutMeRef}>
-          <hr></hr>
+
           <AboutMe />
       </div>
 

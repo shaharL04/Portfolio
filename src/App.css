@@ -29,14 +29,16 @@ hr{
 }
 
 .openingDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 10px;
 }
 .openingText {
   font-size: 50px;
   font-weight: bold;
   animation: fadeInFromBottom 4s ease-out;
+  
 }
 
 .gradientText{
@@ -44,6 +46,19 @@ hr{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-delay: 0.5s;
+}
+
+.gradientText::after {
+
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .normalText{
@@ -113,16 +128,10 @@ button {
   margin-top: 50px;
 }
 
-.menuIntroduction{
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  margin-top: 50px;
-}
+
 
 .aboutMeDivWrapper{
-  margin: 100px 0;
+  margin-top: 500px;
 }
 
 .stackDivWrapper{
@@ -135,4 +144,17 @@ button {
 
 .FooterDivWrapper{
   height: 10vh;
+}
+
+.cursorSpan {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.cursorSvg {
+  width: 12px;
+  height: auto;
+  margin-left: 2px;
+  transform: translateY(2px); 
 }
