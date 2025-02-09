@@ -61,6 +61,13 @@ button {
   cursor: pointer;
 }
 
+.contactMeBtnDiv{
+  width: 35vw;
+  height: 5vh;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+}
+
 .socialBtnsDiv{
   font-size: 20px;
   font-weight: bold;
@@ -141,5 +148,5 @@ button {
   width: 12px;
   height: auto;
   margin-left: 2px;
-  transform: translateY(2px); 
+
 }

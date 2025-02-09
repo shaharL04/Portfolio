@@ -23,7 +23,7 @@ function App() {
     "/yoman.svg",
   ]
 
-  const jobTitles = ["FullStack", "UI/UX", "Frontend", "Backend"];
+  const jobTitles = ["FullStack", "DevOps", "Frontend", "Backend"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -71,9 +71,7 @@ function App() {
       <div className="openingDiv">
         <motion.div
           className="openingText"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+
         >
           <span className="gradientText">
             {currentText}
@@ -97,10 +95,20 @@ function App() {
 
         </motion.div>
         <span className="normalText">
-          Web <br/> Developer
+          Developer
         </span>
       </div>
 
+
+      
+      <div className="interactiveDiv">
+            <div className="contactMeBtnDiv">
+              
+            </div>
+            <div>
+
+            </div>
+      </div>
 
 
       <div className="companiesDiv">
