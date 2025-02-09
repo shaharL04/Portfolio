@@ -23,7 +23,7 @@ function App() {
     "/yoman.svg",
   ]
 
-  const jobTitles = ["FullStack web developer", "FullStack web developer", "FullStack web developer", "FullStack web developer"];
+  const jobTitles = ["FullStack", "UI/UX", "Frontend", "Backend"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -96,6 +96,9 @@ function App() {
         >
 
         </motion.div>
+        <span className="normalText">
+          Web <br/> Developer
+        </span>
       </div>
 
 
