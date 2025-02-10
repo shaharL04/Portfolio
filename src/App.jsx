@@ -132,12 +132,10 @@ function App() {
       </div>
 
       <div className="stackDivWrapper" ref={stackRef}>
-          <hr></hr>
           <Stack />
       </div>
 
       <div className="ProjectsDivWrapper" ref={projectsRef}>
-          <hr></hr>
           <Projects />
       </div>
 

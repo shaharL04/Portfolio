@@ -86,7 +86,10 @@ const Projects = () => {
 
   return (
     <div className="ProjectsDiv">
-      <p className="project">Projects</p>
+      <div className='projectHeader'>
+        <p className="project">Projects</p>
+        <img className='projectImg' src='./projects.svg'></img>
+      </div>
       <div className="sliderContainer">
       <Slider {...settings} className="project-slider">
         {ProjectsArr.map((projectObj, index) => (

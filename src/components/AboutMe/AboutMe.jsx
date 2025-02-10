@@ -2,7 +2,7 @@ import './aboutMe.css';
 
 const AboutMe = () => (
   <div className="aboutMeDiv">
-     <p className="menuIntroduction">Hello! I'm <span className='gredientText'>Shahar Liba</span></p>
+     <p className="menuIntroduction">Hello! I'm <span className='gradientText'>Shahar Liba</span></p>
     <p className="aboutMeP">
       I'm a passionate Full-Stack Developer with 5 years of experience, starting my coding journey at 16. After mastering fundamentals in high school, I honed my skills in the IDF's elite SHAHAR unit, developing critical systems and personal projects.  
       <br/><br/>  

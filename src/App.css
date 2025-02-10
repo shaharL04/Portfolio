@@ -30,7 +30,6 @@ hr{
   background: linear-gradient(90deg, #4169E1, #2ECC71);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-delay: 0.5s;
 }
 
 .gradientText::after {
@@ -158,7 +157,7 @@ button {
 
 
 .aboutMeDivWrapper{
-  margin-top: 500px;
+  margin-top: 150px;
 }
 
 .stackDivWrapper{
