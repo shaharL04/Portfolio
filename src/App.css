@@ -61,11 +61,46 @@ button {
   cursor: pointer;
 }
 
+.interactiveDiv{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .contactMeBtnDiv{
-  width: 35vw;
-  height: 5vh;
+  width: 40vw;
+  height: 6vh;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactMeTxt{
+  color: #343434;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.CVDiv{
+  width: 40vw;
+  height: 6vh;
   border: 2px solid #FFFFFF;
   border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cvTxt{
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 5px;
 }
 
 .socialBtnsDiv{
@@ -117,7 +152,7 @@ button {
   font-weight: bold;
   font-size: 25px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 

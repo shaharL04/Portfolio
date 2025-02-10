@@ -69,6 +69,10 @@ function App() {
     <div>
       
       <div className="openingDiv">
+        <span className="normalText">
+          Creating
+        </span>
+
         <motion.div
           className="openingText"
 
@@ -95,7 +99,7 @@ function App() {
 
         </motion.div>
         <span className="normalText">
-          Developer
+          Solutions
         </span>
       </div>
 
@@ -103,18 +107,19 @@ function App() {
       
       <div className="interactiveDiv">
             <div className="contactMeBtnDiv">
-              
+              <span className="contactMeTxt">Contact Me</span>
             </div>
-            <div>
-
+            <div className="CVDiv">
+                <span className="cvTxt">Download CV</span>
             </div>
       </div>
-
 
       <div className="companiesDiv">
         <p className="companiesText">Companies I've worked with:</p>
         <CompaniesCarousel svgPaths={svgPaths}/>
       </div>
+
+
 
       <div className="menuDiv">
          
