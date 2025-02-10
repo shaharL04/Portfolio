@@ -1,13 +1,22 @@
 
 .StackDiv{
     color: #FFFFFF;
+    margin: 10px;
 }
 
-.stack{
+.stackHeader{
     font-size: 32px;
+    margin-bottom: 10px;
+    display: flex
+
+}
+
+.StackText{
+    margin-right: 10px;
 }
 
 .techExmpP{
+    text-align: center;
     font-size: 20px;
 }
 

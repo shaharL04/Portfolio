@@ -23,6 +23,20 @@
     scroll-behavior: smooth;
 }
 
+.projectHeader{
+    display: flex;
+    margin: 10px;
+}
+
+.project{
+    margin-right: 10px;
+
+}
+
+.projectImg{
+    margin-bottom: 10px;
+}
+
 .projectBody{
     display: flex;
     flex-direction: column;
@@ -67,6 +81,10 @@
     margin: 0px 15px;
     perspective: 1000px;
     
+}
+
+.project{
+    margin-bottom: 20px;
 }
   
 .cardInner {
