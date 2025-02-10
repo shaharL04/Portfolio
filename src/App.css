@@ -16,27 +16,14 @@ hr{
   font-family: inherit;
 }
 
-
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20px); 
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .openingDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  font-size: 50px;
+  margin-left: 10px;
 }
 .openingText {
   font-size: 50px;
   font-weight: bold;
-  animation: fadeInFromBottom 4s ease-out;
+  
 }
 
 .gradientText{
@@ -44,6 +31,19 @@ hr{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-delay: 0.5s;
+}
+
+.gradientText::after {
+
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .normalText{
@@ -59,6 +59,48 @@ hr{
 button {
   all: unset;
   cursor: pointer;
+}
+
+.interactiveDiv{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactMeBtnDiv{
+  width: 40vw;
+  height: 6vh;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactMeTxt{
+  color: #343434;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.CVDiv{
+  width: 40vw;
+  height: 6vh;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cvTxt{
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 5px;
 }
 
 .socialBtnsDiv{
@@ -110,19 +152,13 @@ button {
   font-weight: bold;
   font-size: 25px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
-.menuIntroduction{
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center;
-  margin-top: 50px;
-}
+
 
 .aboutMeDivWrapper{
-  margin: 100px 0;
+  margin-top: 500px;
 }
 
 .stackDivWrapper{
@@ -135,4 +171,17 @@ button {
 
 .FooterDivWrapper{
   height: 10vh;
+}
+
+.cursorSpan {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.cursorSvg {
+  width: 12px;
+  height: auto;
+  margin-left: 2px;
+
 }
