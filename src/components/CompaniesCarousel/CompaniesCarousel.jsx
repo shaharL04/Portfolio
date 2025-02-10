@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import Marquee from "react-fast-marquee";
 import "./CompaniesCarousel.css";
 
 const CompaniesCarousel = ({ svgPaths }) => {
@@ -28,24 +29,16 @@ const CompaniesCarousel = ({ svgPaths }) => {
 
   return (
     <div className="companies-carousel-container" ref={carouselRef}>
-      <div className="companies-carousel-content">
+      <Marquee gradient={false}>
         {svgPaths.map((path, index) => (
-          <div key={index} className="companies-carousel-item">
-            <img src={path} alt={`Company Logo ${index + 1}`} />
-          </div>
+          <img
+            key={index}
+            src={path}
+            alt="company logo"
+            className="company-logo"
+          />
         ))}
-        {/* Duplicate SVGs for seamless looping */}
-        {svgPaths.map((path, index) => (
-          <div key={`duplicate-${index}`} className="companies-carousel-item">
-            <img src={path} alt={`Duplicate Logo ${index + 1}`} />
-          </div>
-        ))}
-        {svgPaths.map((path, index) => (
-          <div key={`duplicate-${index}`} className="companies-carousel-item">
-            <img src={path} alt={`Duplicate Logo ${index + 1}`} />
-          </div>
-        ))}
-      </div>
+      </Marquee>
     </div>
   );
 };
