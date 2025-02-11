@@ -3,9 +3,15 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className="footerDiv">
-            <img className ="socialLinks" src="/github.svg"></img>
-            <img className ="socialLinks" src="/whiteLinkedin.svg"></img>
-            <img className ="socialLinks" src="/whiteTwitter.svg"></img>
+            <a href="https://github.com/shaharL04" target="_blank" >
+                <img className="socialLinks" src="/github.svg" alt="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/your-username" target="_blank" >
+                <img className="socialLinks" src="/whiteLinkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://x.com/LybhShr71679" target="_blank" >
+                <img className="socialLinks" src="/whiteTwitter.svg" alt="Twitter" />
+            </a>
         </div>
     );
 };
