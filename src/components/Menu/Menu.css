@@ -1,0 +1,10 @@
+.menuWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.menuDynamicDiv{
+    position: fixed;
+    bottom: 7%;
+    z-index: 1000;
+}

@@ -1,69 +1,186 @@
-body{
-  width: 100vw;
-  height: 100vh;
-  background-color: #212121;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'inter', sans-serif;
+}
+
+hr{
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.html,body{
+  background-color: #000000;
+  font-family: inherit;
+}
+
+.openingDiv{
+  font-size: 50px;
+  margin-left: 10px;
+}
+.openingText {
+  font-size: 50px;
+  font-weight: bold;
   
 }
 
+.gradientText{
+  background: linear-gradient(90deg, #4169E1, #2ECC71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.introductionDiv{
-  font-family: 'Fira Code', monospace;
+.gradientText::after {
+
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.normalText{
   color: #FFFFFF;
+  animation-delay: 1s;
 }
 
-.helloIAm{
-  font-size: 10px;
+.animatedImg{
+  max-width: 100px;
+  height: auto;
 }
 
-.myName{
-  font-size: 32px;
+button {
+  all: unset;
+  cursor: pointer;
 }
 
-.mySpecialization{
+.interactiveDiv{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactMeBtnDiv{
+  width: 40vw;
+  height: 6vh;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactMeTxt{
+  color: #343434;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.CVDiv{
+  width: 40vw;
+  height: 6vh;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cvTxt{
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.socialBtnsDiv{
   font-size: 20px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
 }
 
-.whatDoIDo{
-  font-size: 16px;
+.GithubBtn{
+  background-color: #343434;
+  color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.textDiv{
-  margin-left: 50px;
+.LinkedinBtn{
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.socialBtns{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.githubImg{
+  width: 40px;
+  height: 40px;
+}
+
+.linkedinImg{
+  width: 30px;
+  height: 30px;
+}
+
+.companiesText{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 
-/* Extra Small Devices (Mobile Phones) */
-@media screen and (max-width: 480px) {
-  .textDiv{
-    width: 70vw;
-  }
+
+.aboutMeDivWrapper{
+  margin-top: 150px;
 }
 
-/* Small Devices (Large Phones) */
-@media screen and (max-width: 768px) {
-  .textDiv{
-    width: 70vw;
-  }
+.stackDivWrapper{
+  margin: 150px 0;
 }
 
-/* Medium Devices (Tablets) */
-@media screen and (max-width: 1024px) {
-  .textDiv{
-    width: 70vw;
-  }
+.ProjectsDivWrapper{
+  margin: 100px 0;
 }
 
-/* Large Devices (Laptops) */
-@media screen and (max-width: 1280px) {
-  .textDiv{
-    width: 70vw;
-  }
+.FooterDivWrapper{
+  height: 10vh;
 }
 
-/* Extra Large Devices (Large Screens) */
-@media screen and (max-width: 1440px) {
-  .textDiv{
-    width: 70vw;
-  }
+.cursorSpan {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.cursorSvg {
+  width: 12px;
+  height: auto;
+  margin-left: 2px;
+
 }

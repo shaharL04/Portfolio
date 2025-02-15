@@ -1,15 +1,14 @@
 import './stack.css'
-import Tech from '../../assets/Tech'
 
 const Stack = () => {
 
 
     return(
         <div className='StackDiv'>
-            <p className='stack'>Stack</p>
-            <p className='techExmpP'>SOME TECHNOLOGIES I’VE WORKED WITH:</p>
+            <div className='stackHeader'><p className='StackText'>Stack </p><img src='./stacks.svg'></img></div>
+            <p className='techExmpP'>Some Technologies I’ve Worked With:</p>
             <p className='techExmpSvg'>
-                <Tech/>
+                <img src='/myStack.svg'></img>
             </p>
         </div>
     )

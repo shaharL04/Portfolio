@@ -1,0 +1,14 @@
+.companies-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+
+
+  .company-logo {
+    width: 125px;
+    height: 70px;
+    margin-right: 32px; 
+  }
+  

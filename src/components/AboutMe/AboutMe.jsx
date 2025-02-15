@@ -1,21 +1,14 @@
-import './aboutMe.css'
-const AboutMe = () =>{
+import './aboutMe.css';
 
+const AboutMe = () => (
+  <div className="aboutMeDiv">
+     <p className="menuIntroduction">Hello! I'm <span className='gradientText'>Shahar Liba</span></p>
+    <p className="aboutMeP">
+      I'm a passionate Full-Stack Developer with 5 years of experience, starting my coding journey at 16. After mastering fundamentals in high school, I honed my skills in the IDF's elite SHAHAR unit, developing critical systems and personal projects.  
+      <br/><br/>  
+      I thrive in collaborative, innovative environments, driven by problem-solving and continuous learning. My goal is to deliver impactful solutions and contribute meaningfully to forward-thinking teams.
+    </p>
+  </div>
+);
 
-    return(
-        <div className="aboutMeDiv">
-            <p className="aboutMe">About Me </p>
-            <p className="aboutMeP">
-            I am a passionate Full-Stack Developer with five years of experience, dedicated to crafting innovative and impactful solutions. <br/><br/>
-
-            My coding journey began when I was 16 in high school, where I spent three years mastering development fundamentals. This foundation paved the way for my service in the IDF's elite computer unit, SHAHAR, where I advanced my skills by developing critical systems for the army while pursuing personal projects over the past three years.<br/><br/>
-
-            With a deep enthusiasm for Full-Stack development, I thrive in dynamic, collaborative environments that encourage creativity and innovation. Problem-solving and continuous learning drive my work, and I am always eager to tackle new challenges that refine my expertise.<br/><br/>
-
-            I am committed to delivering exceptional results and contributing meaningfully to forward-thinking teams, ensuring the projects I work on have a lasting impact.<br/><br/>
-            </p>
-        </div>
-    )
-};
-
-export default AboutMe
+export default AboutMe;

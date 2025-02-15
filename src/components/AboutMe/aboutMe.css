@@ -1,8 +1,18 @@
-.aboutMe{
-    font-size: 32px;
+.menuIntroduction{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .aboutMeDiv{
     color: #FFFFFF;
     font-size: 16px;
+    margin: 10px;
 }
+
+.aboutMeP{
+    font-size: 18px;
+}
+
