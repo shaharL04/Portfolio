@@ -143,9 +143,6 @@ function App() {
             <Footer />
         </div>
       </div>
-      <div className="desktopMessageDiv">
-        <p className="desktopMessage">This website is currently for mobile devices only. <br></br>We're actively working on a desktop version. <br></br> <span className="gradientText">stay tuned for updates!</span> 🚀  </p>
-      </div>
     </div>
   );
 }

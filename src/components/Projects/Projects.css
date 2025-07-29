@@ -98,10 +98,9 @@
 .projectCard.flipped .cardInner {
     transform: rotateY(180deg);
 }
-  
+
 .cardFront,
 .cardBack {
-    width: 100%;
     height: 90%;
     position: absolute;
     backface-visibility: hidden;
@@ -113,6 +112,61 @@
     background: #363636;
     color: white;
     flex-direction: column;
+}
+
+@media screen and (min-width: 458px) {
+    .cardFront,
+    .cardBack {
+        width: 60vw;
+    }
+
+    .cardInner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cardFront,
+    .cardBack {
+        width: 40vw;
+    }
+
+    .cardInner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .cardFront,
+    .cardBack {
+        width: 35vw;
+    }
+
+    .cardInner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+/* Big screens */
+@media screen and (min-width: 1280px) {
+    .cardFront,
+    .cardBack {
+        width: 25vw;
+    }
+
+    .cardInner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
   
 .cardBack {

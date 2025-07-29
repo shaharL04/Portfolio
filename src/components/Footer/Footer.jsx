@@ -6,7 +6,7 @@ const Footer = () => {
             <a href="https://github.com/shaharL04" target="_blank" >
                 <img className="socialLinks" src="/github.svg" alt="GitHub" />
             </a>
-            <a href="https://linkedin.com/in/your-username" target="_blank" >
+            <a href="https://www.linkedin.com/in/shahar-liba-191163234/" target="_blank" >
                 <img className="socialLinks" src="/whiteLinkedin.svg" alt="LinkedIn" />
             </a>
             <a href="https://x.com/LybhShr71679" target="_blank" >
