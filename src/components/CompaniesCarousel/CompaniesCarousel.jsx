@@ -9,15 +9,14 @@ const CompaniesCarousel = ({ svgPaths }) => {
   return (
     <div className="companies-carousel-container">
       <Marquee gradient={false}>
-        {svgPaths.map((path, index) => (
-          <img
-            key={index}
-            src={path}
-            alt="company logo"
-            className="company-logo"
-          />
-        ))}
-      </Marquee>
+  {[
+    ...svgPaths,
+    ...svgPaths,  // duplicate
+    ...svgPaths   // ensure enough length
+  ].map((path, index) => (
+    <img key={index} src={path} className="company-logo" />
+  ))}
+</Marquee>
     </div>
   );
 };

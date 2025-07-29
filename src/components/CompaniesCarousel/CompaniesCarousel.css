@@ -11,4 +11,8 @@
     height: 70px;
     margin-right: 32px; 
   }
+
+  .companies-carousel-container .marquee {
+    min-width: none !important;
+  }
   
