@@ -30,6 +30,14 @@ function App() {
   const [deleting, setDeleting] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
+  const downloadCv = () => {
+  const link = document.createElement("a");
+  link.href = "/Shahar_Liba_CV.pdf"; 
+  link.download = "Shahar_Liba_CV.pdf"; 
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 
   useEffect(() => {
@@ -109,9 +117,9 @@ function App() {
               <div className="contactMeBtnDiv">
                 <span className="contactMeTxt">Contact Me</span>
               </div>
-              <div className="CVDiv">
+              <button className="CVDiv" onClick={downloadCv}>
                   <span className="cvTxt">Download CV</span>
-              </div>
+              </button>
         </div>
 
         <div className="companiesDiv">
