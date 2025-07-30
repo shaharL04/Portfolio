@@ -6,10 +6,13 @@ import Stack from "./components/Stack/Stack";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import { motion } from "framer-motion";
+import { useDisclosure } from '@mantine/hooks';
+import { Modal, Button } from '@mantine/core';
 
 import "./App.css";
 
 function App() {
+  const [opened, { open, close }] = useDisclosure(false);
   const aboutMeRef = useRef(null);
   const stackRef = useRef(null);
   const projectsRef = useRef(null);
@@ -30,14 +33,15 @@ function App() {
   const [deleting, setDeleting] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
-  const downloadCv = () => {
-  const link = document.createElement("a");
-  link.href = "/Shahar_Liba_CV.pdf"; 
-  link.download = "Shahar_Liba_CV.pdf"; 
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+  const downloadCv = () => 
+  {
+    const link = document.createElement("a");
+    link.href = "/Shahar_Liba_CV.pdf"; 
+    link.download = "Shahar_Liba_CV.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
 
   useEffect(() => {
@@ -112,11 +116,16 @@ function App() {
         </div>
 
 
+        <Modal opened={opened} onClose={close} title="Contact" centered>
+          <div className="modalContent">
+            <p className="modalText">Email: Shaharliba9@gmail.com <br></br>Phone Number: 054 - 8066809</p>
+          </div>
+        </Modal>
         
         <div className="interactiveDiv">
-              <div className="contactMeBtnDiv">
+              <button className="contactMeBtnDiv" onClick={open}>
                 <span className="contactMeTxt">Contact Me</span>
-              </div>
+              </button>
               <button className="CVDiv" onClick={downloadCv}>
                   <span className="cvTxt">Download CV</span>
               </button>
