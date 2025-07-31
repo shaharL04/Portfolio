@@ -139,12 +139,9 @@ function App() {
 
 
         <div className="menuDiv">
-          
-          {/*<Menu aboutMeRef = {aboutMeRef} stackRef = {stackRef} projectsRef={projectsRef}/> */ }
         </div>
 
         <div className="aboutMeDivWrapper" ref={aboutMeRef}>
-
             <AboutMe />
         </div>
 
